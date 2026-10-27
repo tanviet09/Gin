@@ -1,0 +1,175 @@
+html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile của Việt 💗</title>
+
+<style>
+/* ===== 1. MÀU SẮC GIAO DIỆN: CHỈNH TẠI ĐÂY ===== */
+:root {
+  --pink: #e85d83;
+  --pink-dark: #c93f68;
+  --bg: #fff6f5;
+  --text: #392b32;
+  --muted: #806d76;
+  --border: #f2dce2;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, #fff0f4, #fff9ef);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  margin-bottom: 22px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(130,58,82,.08);
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 25px;
+}
+
+h1 {
+  color: var(--pink-dark);
+  font-size: clamp(28px, 5vw, 43px);
+  line-height: 1.25;
+}
+
+h2 { color: var(--pink-dark); }
+
+.subtitle {
+  color: var(--muted);
+  max-width: 600px;
+  margin: auto;
+}
+
+.signature {
+  color: var(--pink-dark);
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* ===== 2. Day 1 ===== */
+.info {
+  background: #fff8fa;
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: 17px;
+}
+
+.info h3 { margin: 5px 0; }
+
+.info p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.value {
+  font-weight: bold;
+  color: var(--pink-dark) !important;
+}
+
+/* ===== 3. KHUNG ẢNH MÓN ĂN ===== */
+.food {
+  padding: 0;
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  background: white;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text);
+  transition: .2s;
+  min-width: 0;
+}
+
+.food:hover {
+  transform: translateY(-3px);
+}
+
+.food.selected {
+  border-color: var(--pink);
+  box-shadow: 0 0 0 3px #ffe0e8;
+}
+
+.food-photo {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff0f4;
+  font-size: 40px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="card hero">
+    <h1>Profile của Việt 💗</h1>
+    <p class="subtitle">Chào mừng bạn đến với trang giới thiệu bản thân!</p>
+    <div class="signature">Việt siêu dễ thương</div>
+  </div>
+
+  <div class="card">
+    <h2>Thông tin cơ bản</h2>
+    <div class="grid">
+      <div class="info">
+        <h3>Họ tên</h3>
+        <p class="value">Việt</p>
+      </div>
+      <div class="info">
+        <h3>Sở thích</h3>
+        <p class="value">Code & Ăn uống</p>
+      </div>
+      <div class="info">
+        <h3>Trạng thái</h3>
+        <p class="value">Đang học HTML</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Món ăn yêu thích</h2>
+    <div class="grid">
+      <div class="food">
+        <div class="food-photo">🍕</div>
+      </div>
+      <div class="food">
+        <div class="food-photo">🍜</div>
+      </div>
+      <div class="food">
+        <div class="food-photo">🍰</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
